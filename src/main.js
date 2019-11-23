@@ -1,8 +1,12 @@
-import Vue from 'vue'
-import App from './App.vue'
-
-Vue.config.productionTip = false
+import Vue from "vue";
+import App from "./App.vue";
+import vuetify from "./plugins/vuetify";
+import VueApexCharts from "vue-apexcharts";
+Vue.use(VueApexCharts);
+Vue.config.productionTip = false;
+Vue.component("apexchart", VueApexCharts);
 
 new Vue({
-  render: h => h(App),
-}).$mount('#app')
+  vuetify,
+  render: h => h(App)
+}).$mount("#app");
